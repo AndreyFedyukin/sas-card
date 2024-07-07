@@ -112,10 +112,6 @@ body {
   display: none;
 }
 
-.menu-1024 {
-  display: none;
-}
-
 .header__wallet {
   width: 24px;
   height: 24px;
@@ -132,8 +128,7 @@ body {
   width: 100%;
 }
 
-.menu__list,
-.menu-1024__list {
+.menu__list {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
