@@ -118,10 +118,16 @@ body {
   display: none;
   color: var(--color-lime);
   transform: translateY(2px);
+}
 
-  &:hover {
-    color: var(--color-white);
-  }
+.header__wallet:hover {
+  color: var(--color-white);
+}
+.header__wallet:focus {
+  color: var(--color-lime);
+}
+.header__wallet:active {
+  color: var(--color-lime);
 }
 
 .menu {
@@ -145,11 +151,21 @@ body {
   letter-spacing: 0.6px;
   transition: color 0.3s;
   border-bottom: 2px solid transparent;
+}
 
-  &:hover {
-    color: var(--color-white);
-    border-bottom: 2px solid var(--color-lime);
-  }
+.menu__item:hover {
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-lime);
+}
+
+.menu__item:focus {
+  color: var(--color-grey);
+  border-bottom: 2px solid var(--color-lime);
+}
+
+.menu__item:active {
+  color: var(--color-grey);
+  border-bottom: 2px solid var(--color-lime);
 }
 
 /* burger ******************* */
@@ -162,10 +178,18 @@ body {
   border: 2px solid var(--color-lime);
   outline: none;
   z-index: 5;
+}
 
-  &:hover {
-    border-color: var(--color-white);
-  }
+.header__burger:hover {
+  border-color: var(--color-white);
+}
+
+.header__burger:focus {
+  border: 2px solid var(--color-lime);
+}
+
+.header__burger:active {
+  border: 2px solid var(--color-lime);
 }
 
 .header__burger span {
@@ -185,7 +209,7 @@ body {
 }
 
 .header__burger span:nth-child(2) {
-  transform: translateY(-0.5px);
+  transform: translateY(-0.3px);
 }
 
 .header__burger span:nth-child(3) {
@@ -196,6 +220,14 @@ body {
   background-color: var(--color-white);
 }
 
+.header__burger:focus span {
+  background-color: var(--color-lime);
+}
+
+.header__burger:active span {
+  background-color: var(--color-lime);
+}
+
 /* Крестик ******************* */
 .header.open .header__burger span {
   background-color: var(--color-lime);
@@ -203,6 +235,14 @@ body {
 
 .header.open .header__burger:hover span {
   background-color: var(--color-white);
+}
+
+.header.open .header__burger:focus span {
+  background-color: var(--color-lime);
+}
+
+.header.open .header__burger:active span {
+  background-color: var(--color-lime);
 }
 
 .header.open .header__burger span:nth-child(1) {
@@ -338,10 +378,18 @@ body {
   right: 13px;
   transition: color 0.3s;
   padding: 12px;
+}
 
-  &:hover {
-    color: var(--color-white);
-  }
+.card__scope:hover {
+  color: var(--color-white);
+}
+
+.card__scope:focus {
+  color: var(--color-lime);
+}
+
+.card__scope:active {
+  color: var(--color-lime);
 }
 
 .card__label {
@@ -475,10 +523,18 @@ body {
   border-radius: 8px;
   transition: color 0.3s;
   padding: 16px 24px;
+}
 
-  &:hover {
-    box-shadow: 0 0 10px 0.5px var(--color-lime);
-  }
+.card__btn:hover {
+  box-shadow: 0 0 10px 0.5px var(--color-lime);
+}
+
+.card__btn:focus {
+  box-shadow: none;
+}
+
+.card__btn:active {
+  box-shadow: none;
 }
 
 .card__info {
@@ -519,11 +575,21 @@ body {
   border-radius: 8px;
   transition: color 0.3s;
   padding: 15px 24px;
+}
 
-  &:hover {
-    box-shadow: 0 0 10px 0.5px var(--color-btn-hover);
-    text-shadow: 0.5px 0.5px 0.5px var(--color-btn-hover);
-  }
+.card__btn-back:hover {
+  box-shadow: 0 0 10px 0.5px var(--color-btn-hover);
+  text-shadow: 0.5px 0.5px 0.5px var(--color-btn-hover);
+}
+
+.card__btn-back:hover {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.card__btn-back:hover {
+  box-shadow: 0 0 10px 0.5px var(--color-btn-hover);
+  text-shadow: 0.5px 0.5px 0.5px var(--color-btn-hover);
 }
 
 .card__img-arrow {
@@ -574,13 +640,22 @@ body {
   cursor: pointer;
   z-index: 1;
   padding: 10px 8px 5px 10px;
+}
 
-  & svg path {
-    transition: fill 0.4s;
-  }
-  &:hover svg path {
-    fill: var(--color-white);
-  }
+.modal__close-btn svg path {
+  transition: fill 0.4s;
+}
+
+.modal__close-btn:hover svg path {
+  fill: var(--color-white);
+}
+
+.modal__close-btn:focus svg path {
+  fill: var(--color-lime);
+}
+
+.modal__close-btn:active svg path {
+  fill: var(--color-lime);
 }
 
 .modal.open {
@@ -644,11 +719,21 @@ body {
   line-height: 160%;
   border-bottom: 2px solid transparent;
   transition: color 0.3s;
+}
 
-  &:hover {
-    color: var(--color-white);
-    border-bottom: 2px solid var(--color-lime);
-  }
+.footer__item:hover {
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-lime);
+}
+
+.footer__item:hover {
+  color: var(--color-grey);
+  border-bottom: 2px solid var(--color-lime);
+}
+
+.footer__item:hover {
+  color: var(--color-grey);
+  border-bottom: 2px solid var(--color-lime);
 }
 
 .footer__copyright {
@@ -668,11 +753,20 @@ body {
 
 .social__link {
   color: var(--color-white);
+}
 
-  &:not(:last-child) {
-    margin-right: 13px;
-  }
-  &:hover {
-    color: var(--color-lime);
-  }
+.social__link:not(:last-child) {
+  margin-right: 13px;
+}
+
+.social__link:hover {
+  color: var(--color-lime);
+}
+
+.social__link:focus {
+  color: var(--color-white);
+}
+
+.social__link:active {
+  color: var(--color-white);
 }
