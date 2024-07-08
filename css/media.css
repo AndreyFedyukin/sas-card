@@ -10,6 +10,10 @@
   .bg__grid-1440 {
     display: block;
   }
+
+  .social__link:not(:last-child) {
+    margin-right: 19px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -64,6 +68,14 @@
 
   .footer__social {
     transform: translateY(4px);
+  }
+
+  .social__link {
+    transform: translateY(0px);
+  }
+
+  .social__link:not(:last-child) {
+    margin-right: 15px;
   }
 }
 
@@ -252,6 +264,14 @@
   .footer__copyright {
     padding-left: 0;
   }
+
+  .social__link {
+    transform: translateX(-1.5px);
+  }
+
+  .social__link:not(:last-child) {
+    margin-right: 13px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -261,6 +281,10 @@
 
   .card__label {
     margin-top: -19px;
+  }
+
+  .menu {
+    padding-left: 30px;
   }
 }
 
@@ -283,10 +307,6 @@
 
   .header__hr {
     display: none;
-  }
-
-  .menu {
-    padding-left: 30px;
   }
 
   .header__burger {

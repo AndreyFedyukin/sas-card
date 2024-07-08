@@ -753,10 +753,11 @@ body {
 
 .social__link {
   color: var(--color-white);
+  transform: translateY(2px);
 }
 
 .social__link:not(:last-child) {
-  margin-right: 13px;
+  margin-right: 16px;
 }
 
 .social__link:hover {
