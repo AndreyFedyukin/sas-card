@@ -249,10 +249,6 @@ body {
 }
 
 /* section main *******************   */
-.empty-title {
-  display: none;
-}
-
 .main-wrapper {
   position: relative;
   margin-top: 128px;
@@ -347,15 +343,13 @@ body {
 }
 
 .card__picture {
-  width: 100%;
-  max-width: 798px;
-  height: 100%;
+  max-width: max-content;
+  position: relative;
 }
 
 .card__img {
   width: 100%;
   max-width: 798px;
-  position: relative;
   margin: 0 auto;
 }
 
@@ -381,6 +375,25 @@ body {
 
 .card__scope:active {
   color: var(--color-lime);
+}
+
+.card__video {
+  width: 100%;
+  display: none;
+  object-fit: inherit;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 128px;
+}
+
+/* !этот класс для демонстрации перед натяжкой на wp удали */
+.demo-pictures {
+  display: block;
+  /* !display: none; */
+}
+/* !этот класс для демонстрации перед натяжкой на wp удали */
+.demo-video {
+  display: none;
+  /* !display: block; */
 }
 
 .card__label {
@@ -580,6 +593,9 @@ body {
 }
 
 /* section modal window ******************* */
+.empty-title {
+  display: none;
+}
 .modal {
   width: 100%;
   height: 100vh;
@@ -691,7 +707,8 @@ body {
 
 .footer__navbar {
   width: 100%;
-  margin-right: 3.6vw;
+  max-width: 910px;
+  margin-right: 20px;
 }
 
 .footer__item {
@@ -725,7 +742,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
-  margin-right: 3.6vw;
+  margin-right: 20px;
 }
 
 .footer__social {
