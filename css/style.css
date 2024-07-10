@@ -161,6 +161,7 @@ body {
 /* burger ******************* */
 .header__burger {
   width: 24px;
+  min-width: 24px;
   height: 24px;
   display: none;
   position: relative;
