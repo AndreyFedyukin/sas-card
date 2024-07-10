@@ -110,13 +110,6 @@
 
   .header__burger {
     display: block;
-    width: 24px;
-    min-width: 24px;
-    height: 24px;
-  }
-
-  .header__burger span {
-    width: 10.3px;
   }
 
   .menu {
@@ -317,18 +310,6 @@
   .header__burger span {
     width: 10px;
   }
-
-  /* .header__burger span:nth-child(1) {
-    transform: translateY(-6px);
-  } */
-
-  /* .header__burger span:nth-child(2) {
-    transform: translateY(-1px);
-  } */
-
-  /* .header__burger span:nth-child(3) {
-    transform: translateY(4px);
-  } */
 
   .main-wrapper {
     margin-top: 124px;

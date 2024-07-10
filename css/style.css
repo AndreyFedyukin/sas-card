@@ -158,20 +158,10 @@ body {
   border-bottom: 2px solid var(--color-lime);
 }
 
-.menu__item:focus {
-  color: var(--color-grey);
-  border-bottom: 2px solid var(--color-lime);
-}
-
-.menu__item:active {
-  color: var(--color-grey);
-  border-bottom: 2px solid var(--color-lime);
-}
-
 /* burger ******************* */
 .header__burger {
-  width: 29px;
-  height: 29px;
+  width: 24px;
+  height: 24px;
   display: none;
   position: relative;
   background-color: transparent;
@@ -193,7 +183,7 @@ body {
 }
 
 .header__burger span {
-  width: 15px;
+  width: 10px;
   height: 2px;
   display: block;
   position: absolute;
@@ -527,14 +517,6 @@ body {
 
 .card__btn:hover {
   box-shadow: 0 0 10px 0.5px var(--color-lime);
-}
-
-.card__btn:focus {
-  box-shadow: none;
-}
-
-.card__btn:active {
-  box-shadow: none;
 }
 
 .card__info {
