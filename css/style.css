@@ -269,7 +269,7 @@ body {
 .bg__grid-1920 {
   max-width: 1600px;
   height: 647px;
-  background-image: url(../img/bg-grid-1920.svg);
+  background-image: url(../img/svg/bg-grid-1920.svg);
   background-repeat: no-repeat;
 }
 
@@ -277,7 +277,7 @@ body {
   max-width: 1232px;
   height: 647px;
   display: none;
-  background-image: url(../img/bg-grid-1440.svg);
+  background-image: url(../img/svg/bg-grid-1440.svg);
   background-repeat: no-repeat;
 }
 
@@ -285,7 +285,7 @@ body {
   max-width: 924px;
   height: 647px;
   display: none;
-  background-image: url(../img/bg-grid-1024.svg);
+  background-image: url(../img/svg/bg-grid-1024.svg);
   background-repeat: no-repeat;
 }
 
@@ -293,7 +293,7 @@ body {
   max-width: 648px;
   height: 492px;
   display: none;
-  background-image: url(../img/bg-grid-768.svg);
+  background-image: url(../img/svg/bg-grid-768.svg);
   background-repeat: no-repeat;
 }
 
@@ -301,7 +301,7 @@ body {
   max-width: 340px;
   height: 492px;
   display: none;
-  background-image: url(../img/bg-grid-360.svg);
+  background-image: url(../img/svg/bg-grid-360.svg);
   background-repeat: no-repeat;
 }
 
@@ -355,7 +355,8 @@ body {
   margin: 0 auto;
 }
 
-.card__scope {
+.card__scope,
+.card__play {
   box-sizing: content-box;
   position: absolute;
   background-color: var(--color-black);
@@ -364,30 +365,35 @@ body {
   top: 10px;
   right: 13px;
   transition: color 0.3s;
-  padding: 12px;
+
+  &:hover {
+    color: var(--color-white);
+  }
+  &:focus {
+    color: var(--color-lime);
+  }
+  &:active {
+    color: var(--color-lime);
+  }
 }
 
-.card__scope:hover {
-  color: var(--color-white);
+.card__scope {
+  padding: clamp(0.36rem, calc(0.27rem + 0.4vw), 0.75rem);
 }
 
-.card__scope:focus {
-  color: var(--color-lime);
-}
-
-.card__scope:active {
-  color: var(--color-lime);
+.card__play {
+  padding: clamp(0.5rem, calc(0.4rem + 0.45vw), 0.94rem);
 }
 
 /* !этот класс для демонстрации перед натяжкой на wp удали */
 .demo-pictures {
   display: block;
-  display: none;
+  /* display: none; */
 }
 /* !этот класс для демонстрации перед натяжкой на wp удали */
 .demo-video {
   display: none;
-  display: block;
+  /* display: block; */
 }
 
 .modal {
@@ -409,8 +415,9 @@ body {
 
 .modal__box {
   width: 100%;
+  max-width: calc(100svw - 60px);
   height: auto;
-  /* height: 100svh; */
+  max-height: calc(100svh - 60px);
   position: relative;
   transform: scale(0);
   transition: transform 0.8s;
@@ -421,8 +428,8 @@ body {
 .modal__card-img {
   width: 100%;
   height: auto;
-  max-width: 100svw;
-  max-height: 100svh;
+  max-width: inherit;
+  max-height: inherit;
   object-fit: cover;
   position: relative;
   border-radius: 16px;

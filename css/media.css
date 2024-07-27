@@ -180,10 +180,6 @@
     padding-top: 48px;
   }
 
-  /* .card__video {
-    margin-bottom: 75px;
-  } */
-
   .card__wrap,
   .card__label,
   .card__artist,
@@ -191,8 +187,23 @@
     max-width: 504px;
   }
 
-  .card__scope {
+  .card__scope,
+  .card__play {
     right: 10px;
+  }
+
+  .card__play {
+    width: 15px;
+    height: 18px;
+  }
+
+  .modal__close-btn {
+    padding: 6px 5px 2px 7px;
+  }
+
+  .modal__close-btn svg {
+    width: 17px;
+    height: 17px;
   }
 
   .card__label {
