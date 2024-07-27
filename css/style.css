@@ -415,9 +415,9 @@ body {
 
 .modal__box {
   width: 100%;
-  max-width: calc(100svw - 30px);
+  max-width: calc(100svw - 20px);
   height: auto;
-  max-height: calc(100svh - 30px);
+  max-height: calc(100svh - 20px);
   position: relative;
   transform: scale(0);
   transition: transform 0.8s;
