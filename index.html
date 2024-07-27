@@ -95,7 +95,11 @@
 
               <!-- !перед натяжкой на wp удали "demo-video" -->
               <div class="card__box-video demo-video">
-                <img class="card__img" src="img/video-2.png" alt="Card img" aria-label="Card">
+                <picture class="card__picture">
+                  <source srcset="img/rising.avif" type="image/avif">
+                  <source srcset="img/rising.webp" type="image/webp">
+                  <img class="card__img" src="img/rising.jpg" alt="Card img" aria-label="Card image" loading="lazy">
+                </picture>
 
                 <button class="open-modal-btn-video" aria-label="Play">
                   <svg class="card__play" width="17" height="20" viewBox="0 0 17 20" fill="none"
@@ -116,9 +120,9 @@
                       </svg>
                     </button>
 
-                    <video id="myVideo" class="card__video modal__card-video" width="800" preload="auto" loop muted
+                    <video id="myVideo" class="card__video modal__card-video" width="800" preload="auto" loop
                       aria-label="Video">
-                      <source src="video/sea-1.mp4" type="video/mp4">
+                      <source src="video/rising.mp4" type="video/mp4">
                     </video>
                   </div>
                 </div>

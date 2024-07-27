@@ -388,12 +388,12 @@ body {
 /* !этот класс для демонстрации перед натяжкой на wp удали */
 .demo-pictures {
   display: block;
-  /* display: none; */
+  display: none;
 }
 /* !этот класс для демонстрации перед натяжкой на wp удали */
 .demo-video {
   display: none;
-  /* display: block; */
+  display: block;
 }
 
 .modal {

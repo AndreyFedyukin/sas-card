@@ -209,7 +209,8 @@
   .card__label {
     background-color: var(--color-black);
     padding: 23px 25px 10px;
-    margin-top: -76px;
+    /* margin-top: -76px; */
+    margin-top: -19px;
   }
 
   .card__title {
