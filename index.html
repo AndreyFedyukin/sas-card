@@ -94,13 +94,44 @@
             <div class="card__wrap">
 
               <!-- !перед натяжкой на wp удали "demo-video" -->
-              <video class="card__video demo-video" width="800" preload="auto" loop controls="controls"
-                poster="img/video-2.png" aria-label="Video">
-                <source src="video/sea-1.mp4" type="video/mp4">
-              </video>
+              <div class="card__box-video demo-video">
+                <img class="card__img" src="img/video-2.png" alt="Card img" aria-label="Card">
+
+                <button class="open-modal-btn-video" aria-label="Scope Image">
+                  <svg class="card__scope" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M21.33 0H3.67C1.92 0 0.5 1.42804 0.5 3.18794V20.9479C0.5 22.7078 1.92 24.1358 3.67 24.1358H21.33C23.08 24.1358 24.5 22.7078 24.5 20.9479V3.18794C24.5 1.42804 23.08 0 21.33 0ZM22.5 20.9479C22.5 21.6016 21.98 22.1245 21.33 22.1245H3.67C3.02 22.1245 2.5 21.6016 2.5 20.9479V3.18794C2.5 2.53426 3.02 2.01132 3.67 2.01132H21.33C21.98 2.01132 22.5 2.53426 22.5 3.18794V20.9479Z"
+                      fill="currentColor" />
+                    <path
+                      d="M19.5 4.02264H14.5C13.95 4.02264 13.5 4.47518 13.5 5.0283C13.5 5.58141 13.95 6.03396 14.5 6.03396H18.5V10.0566C18.5 10.6097 18.95 11.0623 19.5 11.0623C20.05 11.0623 20.5 10.6097 20.5 10.0566V5.0283C20.5 4.47518 20.05 4.02264 19.5 4.02264Z"
+                      fill="currentColor" />
+                    <path
+                      d="M10.5 18.1019H6.5V14.0792C6.5 13.5261 6.05 13.0736 5.5 13.0736C4.95 13.0736 4.5 13.5261 4.5 14.0792V19.1075C4.5 19.6606 4.95 20.1132 5.5 20.1132H10.5C11.05 20.1132 11.5 19.6606 11.5 19.1075C11.5 18.5544 11.05 18.1019 10.5 18.1019Z"
+                      fill="currentColor" />
+                  </svg>
+                </button>
+
+                <div class="modal my-modal-video">
+                  <div class="modal__box js-modal-box">
+                    <button class="modal__close-btn close-modal-btn-video">
+                      <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                          fill="#d6ef0e" />
+                        <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#d6ef0e" />
+                      </svg>
+                    </button>
+
+                    <video id="myVideo" class="card__video modal__card-video" width="800" preload="auto" loop muted
+                      aria-label="Video">
+                      <source src="video/sea-1.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
 
               <!-- !перед натяжкой на wp удали "demo-pictures" -->
-              <div class="card__scene demo-pictures">
+              <div class="card__box-pictures demo-pictures">
                 <picture class="card__picture">
                   <source srcset="img/art-1.avif" type="image/avif">
                   <source srcset="img/art-1.webp" type="image/webp">

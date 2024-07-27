@@ -180,9 +180,9 @@
     padding-top: 48px;
   }
 
-  .card__video {
+  /* .card__video {
     margin-bottom: 75px;
-  }
+  } */
 
   .card__wrap,
   .card__label,
@@ -198,7 +198,7 @@
   .card__label {
     background-color: var(--color-black);
     padding: 23px 25px 10px;
-    margin-top: -75px;
+    margin-top: -76px;
   }
 
   .card__title {
@@ -285,10 +285,6 @@
     padding-left: 30px;
   }
 
-  .card__video {
-    margin-bottom: 19px;
-  }
-
   .card__label {
     margin-top: -19px;
   }
@@ -313,6 +309,11 @@
 
   .header__hr {
     display: none;
+  }
+
+  .header__logo,
+  .header__wallet {
+    margin-right: 15px;
   }
 
   .header__wallet {
