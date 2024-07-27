@@ -180,6 +180,10 @@
     padding-top: 48px;
   }
 
+  .card__video {
+    margin-bottom: 75px;
+  }
+
   .card__wrap,
   .card__label,
   .card__artist,
@@ -187,29 +191,14 @@
     max-width: 504px;
   }
 
-  .card__scope,
-  .card__play {
+  .card__scope {
     right: 10px;
-  }
-
-  .card__play {
-    width: 15px;
-    height: 18px;
-  }
-
-  .modal__close-btn {
-    padding: 6px 5px 2px 7px;
-  }
-
-  .modal__close-btn svg {
-    width: 17px;
-    height: 17px;
   }
 
   .card__label {
     background-color: var(--color-black);
     padding: 23px 25px 10px;
-    margin-top: -76px;
+    margin-top: -75px;
   }
 
   .card__title {
@@ -296,6 +285,10 @@
     padding-left: 30px;
   }
 
+  .card__video {
+    margin-bottom: 19px;
+  }
+
   .card__label {
     margin-top: -19px;
   }
@@ -320,11 +313,6 @@
 
   .header__hr {
     display: none;
-  }
-
-  .header__logo,
-  .header__wallet {
-    margin-right: 15px;
   }
 
   .header__wallet {

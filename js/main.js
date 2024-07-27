@@ -32,59 +32,31 @@ document.body.addEventListener("click", (event) => {
   document.querySelector(".header").classList.remove("open");
 });
 
-// document.body.style.overflow = "hidden";
-// document.body.style.overflow = "";
-
-// Модальное окно для видео ***************************
-const modalVideo = document.querySelector(".my-modal-video");
-const video = document.getElementById("myVideo");
-
+// Модальное окно ***************************
 document
-  .querySelector(".open-modal-btn-video")
-  .addEventListener("click", () => {
-    modalVideo.classList.add("open");
-    video.play();
-    document.body.style.overflow = "hidden";
+  .querySelector(".open-modal-btn")
+  .addEventListener("click", function () {
+    document.querySelector(".my-modal").classList.add("open");
   });
 
 document
-  .querySelector(".close-modal-btn-video")
-  .addEventListener("click", () => {
-    modalVideo.classList.remove("open");
-    video.pause();
+  .querySelector(".close-my-modal-btn")
+  .addEventListener("click", function () {
+    document.querySelector(".my-modal").classList.remove("open");
   });
 
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    modalVideo.classList.remove("open");
-    video.pause();
+    document.querySelector(".my-modal").classList.remove("open");
   }
 });
 
-modalVideo.addEventListener("click", (event) => {
-  if (event.target !== event.currentTarget) return;
-  event.currentTarget.classList.remove("open");
-  video.pause();
-});
-
-// Модальное окно для картинок ***************************
-const modalImage = document.querySelector(".my-modal");
-
-document.querySelector(".open-modal-btn").addEventListener("click", () => {
-  modalImage.classList.add("open");
-});
-
-document.querySelector(".close-my-modal-btn").addEventListener("click", () => {
-  modalImage.classList.remove("open");
-});
-
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    modalImage.classList.remove("open");
-  }
-});
-
-modalImage.addEventListener("click", (event) => {
-  if (event.target !== event.currentTarget) return;
+document
+  .querySelector(".my-modal .modal__box")
+  .addEventListener("click", (event) => {
+    event._isClickWithInModal = true;
+  });
+document.querySelector(".my-modal").addEventListener("click", (event) => {
+  if (event._isClickWithInModal) return;
   event.currentTarget.classList.remove("open");
 });
