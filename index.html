@@ -24,7 +24,7 @@
         <div class="header__wrapper">
 
           <a href="#" class="header__logo" aria-label="Logo">
-            <img class="header__logo-img" src="img/logo.svg" alt="Logo">
+            <img class="header__logo-img" src="img/svg/logo.svg" alt="Logo">
           </a>
 
           <hr class="header__hr">
@@ -94,20 +94,45 @@
             <div class="card__wrap">
 
               <!-- !перед натяжкой на wp удали "demo-video" -->
-              <video class="card__video demo-video" width="800" preload="auto" controls="controls"
-                poster="img/video-2.png" aria-label="Video">
-                <source src="video/sea-1.mp4" type="video/mp4" />
-              </video>
+              <div class="card__box-video demo-video">
+                <img class="card__img" src="img/video-2.png" alt="Card img" aria-label="Card">
+
+                <button class="open-modal-btn-video" aria-label="Play">
+                  <svg class="card__play" width="17" height="20" viewBox="0 0 17 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.59381 19.0102C2.0535 19.0102 2.46064 18.8468 2.97663 18.551L15.3501 11.3883C16.2709 10.8448 16.6888 10.3988 16.6888 9.68453C16.6888 8.97018 16.2709 8.52425 15.3501 7.99116L2.97663 0.82137C2.46064 0.522188 2.0535 0.369263 1.59381 0.369263C0.690552 0.369263 0.0126953 1.05523 0.0126953 2.1767V17.1956C0.0126953 18.3171 0.690552 19.0102 1.59381 19.0102Z"
+                      fill="currentColor" />
+                  </svg>
+                </button>
+
+                <div class="modal my-modal-video">
+                  <div class="modal__box js-modal-box">
+                    <button class="modal__close-btn close-modal-btn-video" aria-label="Close">
+                      <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                          fill="#d6ef0e" />
+                        <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#d6ef0e" />
+                      </svg>
+                    </button>
+
+                    <video id="myVideo" class="card__video modal__card-video" width="800" preload="auto" loop muted
+                      aria-label="Video">
+                      <source src="video/sea-1.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
 
               <!-- !перед натяжкой на wp удали "demo-pictures" -->
-              <div class="card__scene demo-pictures">
+              <div class="card__box-pictures demo-pictures">
                 <picture class="card__picture">
                   <source srcset="img/art-1.avif" type="image/avif">
                   <source srcset="img/art-1.webp" type="image/webp">
                   <img class="card__img" src="img/art-1.jpeg" alt="Card img" aria-label="Card image" loading="lazy">
                 </picture>
 
-                <button class="open-modal-btn" aria-label="Scope Image">
+                <button class="open-modal-btn" aria-label="Scope">
                   <svg class="card__scope" width="25" height="25" viewBox="0 0 25 25" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -121,6 +146,20 @@
                       fill="currentColor" />
                   </svg>
                 </button>
+
+                <div class="modal my-modal">
+                  <div class="modal__box">
+                    <button class="modal__close-btn close-my-modal-btn" aria-label="Close">
+                      <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                          fill="#d6ef0e" />
+                        <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#d6ef0e" />
+                      </svg>
+                    </button>
+
+                    <img class="modal__card-img" src="img/art-1.jpeg" alt="Card img" aria-label="Card">
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -131,7 +170,7 @@
                   <span class="card__price">Price:</span>
                   <span class="card__data">2.4</span>
                   <span class="card__logo">
-                    <img src="img/ethereum.svg" alt="Ethereum">
+                    <img src="img/svg/ethereum.svg" alt="Ethereum">
                   </span>
                 </div>
                 <div class="box-bonus">
@@ -163,7 +202,7 @@
             </div>
 
             <button class="card__btn-back" aria-label="Back">
-              <img class="card__img-arrow" src="img/arrow.svg" alt="Arrow">
+              <img class="card__img-arrow" src="img/svg/arrow.svg" alt="Arrow">
               Back&nbsp;to&nbsp;collection
             </button>
 
@@ -171,22 +210,6 @@
         </div>
       </section>
 
-      <section>
-        <h1 class="empty-title">empty title</h1>
-        <div class="modal my-modal">
-          <div class="modal__box">
-            <button class="modal__close-btn close-my-modal-btn">
-              <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
-                  fill="#d6ef0e" />
-                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#d6ef0e" />
-              </svg>
-            </button>
-
-            <img class="modal__card-img" src="img/art-1.jpeg" alt="Card img" aria-label="Card">
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
