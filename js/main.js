@@ -1,4 +1,4 @@
-// Цвет хедера при скроле ***************************
+// Цвет хедера при скролле ***************************
 let header = document.querySelector(".header");
 window.onscroll = function () {
   if (window.scrollY > 100) {
@@ -32,9 +32,6 @@ document.body.addEventListener("click", (event) => {
   document.querySelector(".header").classList.remove("open");
 });
 
-// document.body.style.overflow = "hidden";
-// document.body.style.overflow = "";
-
 // Модальное окно для видео ***************************
 const modalVideo = document.querySelector(".my-modal-video");
 const video = document.getElementById("myVideo");
@@ -52,6 +49,7 @@ document
   .addEventListener("click", () => {
     modalVideo.classList.remove("open");
     video.pause();
+    document.body.style.overflow = "";
   });
 
 window.addEventListener("keydown", (e) => {
@@ -72,10 +70,12 @@ const modalImage = document.querySelector(".my-modal");
 
 document.querySelector(".open-modal-btn").addEventListener("click", () => {
   modalImage.classList.add("open");
+  document.body.style.overflow = "hidden";
 });
 
 document.querySelector(".close-my-modal-btn").addEventListener("click", () => {
   modalImage.classList.remove("open");
+  document.body.style.overflow = "";
 });
 
 window.addEventListener("keydown", (e) => {
