@@ -34,7 +34,7 @@ document.body.addEventListener("click", (event) => {
 
 // Модальное окно для видео ***************************
 const modalVideo = document.querySelector(".my-modal-video");
-const video = document.getElementById("myVideo");
+const video = document.querySelector(".my-video");
 
 document
   .querySelector(".open-modal-btn-video")
