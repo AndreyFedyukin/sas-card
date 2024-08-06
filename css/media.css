@@ -44,13 +44,6 @@
     margin-bottom: 15px;
   }
 
-  .card__open-btn,
-  .modal__close-btn {
-    width: 42px;
-    height: 42px;
-    padding: 9px;
-  }
-
   .footer__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -187,23 +180,29 @@
     padding-top: 48px;
   }
 
+  .card__open-btn,
+  .modal__close-btn {
+    top: 8px;
+    right: 8px;
+    border-radius: 6px;
+  }
+
+  .card__scope {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card__play,
+  .card__cross {
+    width: 17px;
+    height: 17px;
+  }
+
   .card__wrap,
   .card__label,
   .card__artist,
   .card__info {
     max-width: 504px;
-  }
-
-  .card__scope,
-  .card__play {
-    right: 10px;
-  }
-
-  .card__open-btn,
-  .modal__close-btn {
-    width: 40px;
-    height: 40px;
-    padding: 8px;
   }
 
   .card__label {
@@ -296,11 +295,15 @@
     padding-left: 30px;
   }
 
-  .card__open-btn,
-  .modal__close-btn {
-    width: 35px;
-    height: 35px;
-    padding: 6.2px;
+  .card__scope {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card__play,
+  .card__cross {
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -351,11 +354,6 @@
 
   .card {
     padding-top: 53px;
-  }
-
-  .card__scope {
-    top: 9px;
-    right: 9px;
   }
 
   .card__label {

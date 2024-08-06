@@ -33,92 +33,70 @@ document.body.addEventListener("click", (event) => {
 });
 
 // Модальное окно для видео ***************************
-const modalVideo = document.querySelectorAll("[data-modal-video]");
-const video = document.querySelectorAll(".my-video");
-const body = document.body;
+const modalVideo = document.querySelector(".my-modal-video");
+const video = document.querySelector(".my-video");
 
-document.querySelectorAll("[data-open-video]").forEach((button, index) => {
-  button.addEventListener("click", () => {
-    modalVideo[index].classList.add("open");
-    video[index].play();
-    body.classList.add("disable-scroll");
+document
+  .querySelector(".open-modal-btn-video")
+  .addEventListener("click", () => {
+    modalVideo.classList.add("open");
+    video.play();
+    document.body.style.position = "fixed";
+    document.body.style.overflow = "hidden";
   });
-});
 
-document.querySelectorAll("[data-close-video]").forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const target = event.target.closest("[data-modal-video]");
-    if (target) {
-      const index = Array.from(modalVideo).indexOf(target);
-      modalVideo[index].classList.remove("open");
-      video[index].pause();
-      body.classList.remove("disable-scroll");
-    }
+document
+  .querySelector(".close-modal-btn-video")
+  .addEventListener("click", () => {
+    modalVideo.classList.remove("open");
+    video.pause();
+    document.body.style.position = "";
+    document.body.style.overflow = "";
   });
-});
 
-document.addEventListener("keydown", (e) => {
+window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    modalVideo.forEach((element) => {
-      if (element.classList.contains("open")) {
-        const index = Array.from(modalVideo).indexOf(element);
-        modalVideo[index].classList.remove("open");
-        video[index].pause();
-        body.classList.remove("disable-scroll");
-      }
-    });
+    modalVideo.classList.remove("open");
+    video.pause();
+    document.body.style.position = "";
+    document.body.style.overflow = "";
   }
 });
 
-modalVideo.forEach((element) => {
-  element.addEventListener("click", (event) => {
-    if (event.target !== event.currentTarget) return;
-    const index = Array.from(modalVideo).indexOf(element);
-    modalVideo[index].classList.remove("open");
-    video[index].pause();
-    body.classList.remove("disable-scroll");
-  });
+modalVideo.addEventListener("click", (event) => {
+  if (event.target !== event.currentTarget) return;
+  event.currentTarget.classList.remove("open");
+  video.pause();
+  document.body.style.position = "";
+  document.body.style.overflow = "";
 });
 
-// Модальное окно для картины ***************************
-const modalImg = document.querySelectorAll("[data-modal-img]");
-const bodes = document.body;
+// Модальное окно для картинок ***************************
+const modalImage = document.querySelector(".my-modal-img");
 
-document.querySelectorAll("[data-open-img]").forEach((button, index) => {
-  button.addEventListener("click", () => {
-    modalImg[index].classList.add("open");
-    bodes.classList.add("disable-scroll");
-  });
+document.querySelector(".open-modal-btn").addEventListener("click", () => {
+  modalImage.classList.add("open");
+  document.body.style.position = "fixed";
+  document.body.style.overflow = "hidden";
 });
 
-document.querySelectorAll("[data-close-img]").forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const target = event.target.closest("[data-modal-img]");
-    if (target) {
-      const index = Array.from(modalImg).indexOf(target);
-      modalImg[index].classList.remove("open");
-      bodes.classList.remove("disable-scroll");
-    }
-  });
+document.querySelector(".close-modal-btn-img").addEventListener("click", () => {
+  modalImage.classList.remove("open");
+  document.body.style.position = "";
+  document.body.style.overflow = "";
 });
 
-document.addEventListener("keydown", (e) => {
+window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    modalImg.forEach((element) => {
-      if (element.classList.contains("open")) {
-        const index = Array.from(modalImg).indexOf(element);
-        modalImg[index].classList.remove("open");
-        bodes.classList.remove("disable-scroll");
-      }
-    });
+    modalImage.classList.remove("open");
+    document.body.style.position = "";
+    document.body.style.overflow = "";
   }
 });
 
-modalImg.forEach((element) => {
-  element.addEventListener("click", (event) => {
-    if (event.target !== event.currentTarget) return;
-    const index = Array.from(modalImg).indexOf(element);
-    modalImg[index].classList.remove("open");
-    bodes.classList.remove("disable-scroll");
-  });
+modalImage.addEventListener("click", (event) => {
+  if (event.target !== event.currentTarget) return;
+  event.currentTarget.classList.remove("open");
+  document.body.style.position = "";
+  document.body.style.overflow = "";
 });
