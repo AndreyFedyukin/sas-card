@@ -414,17 +414,6 @@ body {
   ); /* max-15px, min-8px */
 }
 
-/* !этот класс для демонстрации перед натяжкой на wp удали */
-.demo-video {
-  display: none;
-  display: block;
-}
-/* !этот класс для демонстрации перед натяжкой на wp удали */
-.demo-pictures {
-  display: block;
-  display: none;
-}
-
 .modal {
   width: 100%;
   height: 100%;
@@ -447,7 +436,6 @@ body {
   max-width: calc(100svw - 20px);
   height: auto;
   max-height: calc(100svh - 20px);
-  position: relative;
   transform: scale(0);
   transition: transform 0.8s;
   z-index: 1;
@@ -466,9 +454,11 @@ body {
 }
 
 .modal__img {
-  width: 100%;
+  max-width: calc(100svw - 20px);
   height: auto;
+  max-height: calc(100svh - 20px);
   border-radius: 16px;
+  object-fit: contain;
 }
 
 .modal.open {
