@@ -423,7 +423,7 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--color-bg);
   overflow-y: hidden;
   visibility: hidden;
   opacity: 0;
@@ -471,7 +471,8 @@ body {
 }
 
 .disable-scroll {
-  height: 100svh;
+  height: 100%;
+  position: fixed;
   overflow: hidden;
 }
 
