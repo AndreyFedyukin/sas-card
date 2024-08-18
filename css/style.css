@@ -684,9 +684,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
+  right: 0;
   bottom: 0;
-  left: 15%;
+  left: 0;
   z-index: -1;
+  margin: 0 auto;
 }
 
 .footer__blur-2 {
@@ -697,9 +699,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  right: 25%;
+  right: 0;
   bottom: 0;
+  left: 0;
   z-index: -1;
+  margin: 0 auto;
 }
 
 .footer__wrapper {
