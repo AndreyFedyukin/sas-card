@@ -67,12 +67,12 @@
 
   .footer__copyright {
     align-self: center;
-    padding: 0;
+    margin: 0;
     margin-right: 46px;
   }
 
   .footer__social {
-    transform: translateY(4px);
+    transform: translateY(2px);
   }
 
   .social__link {
@@ -91,12 +91,13 @@
 
   .header__wrapper {
     flex-direction: row;
-    padding: 45px 0 43px;
+    padding-top: clamp(1.38rem, calc(0.11rem + 5.64vw), 2.81rem);
+    padding-bottom: clamp(1.38rem, calc(0.22rem + 5.15vw), 2.69rem);
   }
 
   .header__logo {
     margin: 0;
-    margin-right: 29px;
+    margin-right: 30px;
   }
 
   .header__hr {
@@ -104,7 +105,7 @@
     max-width: 316px;
     display: block;
     margin: 0;
-    margin-right: 25px;
+    margin-right: 30px;
   }
 
   .header__wallet {
@@ -274,7 +275,7 @@
   }
 
   .footer__copyright {
-    padding-left: 0;
+    margin: 0;
   }
 
   .social__link {
@@ -289,6 +290,10 @@
 @media (max-width: 500px) {
   .header__hr {
     display: none;
+  }
+
+  .main-wrapper {
+    margin-top: 100px;
   }
 
   .menu {
@@ -318,10 +323,6 @@
 
   .bg__grid-360 {
     display: block;
-  }
-
-  .header__wrapper {
-    padding-top: 48px;
   }
 
   .header__hr {
@@ -385,11 +386,6 @@
   }
 
   .card__btn-back {
-    padding: 15px 39px;
     padding: 15px 13%;
-  }
-
-  .footer__social {
-    transform: translateY(2px);
   }
 }
