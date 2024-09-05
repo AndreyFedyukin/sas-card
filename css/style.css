@@ -265,6 +265,11 @@ body {
 }
 
 /* section main *******************   */
+.main {
+  width: 100%;
+  min-height: calc(100svh - 150px);
+}
+
 .main-wrapper {
   position: relative;
   margin-top: 128px;
